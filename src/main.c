@@ -56,7 +56,7 @@ void print_ant_path(t_path *path, t_farm *farm)
 {
 	int ant = 1;
 	t_path *room = NULL;
-	while(ant++ <= farm->nb_ants)
+	while(ant <= farm->nb_ants)
 	{
 		room = path;
 		while(room)
@@ -65,6 +65,7 @@ void print_ant_path(t_path *path, t_farm *farm)
 			putchar('\n');
 			room = room->next;
 		}
+		ant++;
 	}	
 }
 
